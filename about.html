@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header1">
+        <div class="container">
+            <nav>
+                <img src="A.png" class="logo"></img>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            
+        </div>
+    </div>
+  
+  <!-- ----------ABOUT---------- -->
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                
+                <img src="IMG_4784.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Anand Vijay M, a passionate and innovative web developer with a strong background in crafting dynamic and user-centric websites. With a keen eye for design and a flair for coding, I thrive on turning complex concepts into functional, visually appealing online experiences.
+                    My journey in web development began with a fascination for the endless possibilities the digital realm offers. Over the years, I've honed my skills in HTML, CSS, and JavaScript to create responsive and interactive websites that engage and captivate users. From elegant landing pages to robust e-commerce platforms, I've had the privilege of translating clients' visions into reality.
+                    My approach blends creativity with technical expertise. I believe in keeping up with the latest trends and best practices in web development, ensuring that each project I undertake is equipped with modern design principles and efficient coding techniques. My goal is not just to build websites, but to create intuitive, seamless user experiences that leave a lasting impact.
+                    Collaboration is at the heart of my work. I enjoy working closely with designers, content creators, and clients to ensure every aspect of a project aligns with the intended goals. Whether it's brainstorming ideas, solving challenges, or refining the final product, I thrive in a collaborative environment that values innovation and teamwork.
+                    
+                </p>
+               
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('Course Completed')">Internship & course completed</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>MEAN stack developer</span><br>Building a Full web pages</li>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Course Completed">
+                    <ul>
+                        <li><span>2023</span><br>Internship at Kevell crop.</li>
+                        <li><span>2022-2023</span><br>Web Development</li>
+                        <li><span>2023 - Current</span><br>MEAN stack developer</li>
+                        <li><span>2020-2021</span><br>PYTHON</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>SSLC-2018</span><br>LIONS MATRIC HR SEC SCHOOL</li>
+                        <li><span>HSC-2020</span><br>LIONS MATRIC HR SEC SCHOOL</li>
+                        <li><span>2020-2024</span><br>SNS COLLEGE OF TECHNOLOGY COIMBATORE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>copyright @ 2023. Made with <i class="fas fa-heart"></i> by Anandvijay M</p>
+</div>
+</div>
+
+<script>
+    var tabLinks = document.getElementsByClassName('tab-links');
+    var tabContents = document.getElementsByClassName('tab-contents');
+
+    function openTab(tabName) {
+        for (tabLink of tabLinks) {
+            tabLink.classList.remove('active-link');
+        }
+        for (tabContent of tabContents) {
+            tabContent.classList.remove('active-tab');
+        }
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabName).classList.add('active-tab');
+    }
+
+    // JavaScript for handling the mobile navigation menu
+    document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.toggle('show');
+    });
+
+    document.querySelector('.fas.fa-times').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.remove('show');
+    });
+
+</script>
+</body>
+
+</html>
